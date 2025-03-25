@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concussions and CTE goes beyond the NFL: How sports leagues should minimize traumatic head injuries</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            font-size: 20px;
+        }
+
+        .section {
+            min-height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 40px 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #007BFF, #00BFFF);
+            color: white;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 4.5rem;
+            animation: shakeAndFadeIn 3s ease-in-out;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 2rem;
+            animation: fadeIn 3s ease-in-out 1.5s;
+            margin: 10px 0 0;
+        }
+
+        @keyframes shakeAndFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateX(0) rotate(0);
+            }
+            20% {
+                opacity: 1;
+                transform: translateX(-10px) rotate(-5deg);
+            }
+            40% {
+                transform: translateX(10px) rotate(5deg);
+            }
+            60% {
+                transform: translateX(-10px) rotate(-5deg);
+            }
+            80% {
+                transform: translateX(10px) rotate(5deg);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0) rotate(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/800x600') no-repeat center center/cover;
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.1) 25%,
+                rgba(255, 255, 255, 0.2) 50%,
+                rgba(255, 255, 255, 0.1) 75%
+            );
+            background-size: 200% 100%;
+            animation: moveGradient 5s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes moveGradient {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        .text-section {
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: left;
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            font: size 20px;
+        }
+
+        .data-visualization {
+            background-color: #f8f9fa;
+            padding: 40px;
+        }
+
+        .data-visualization img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .additional-text-section {
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: left;
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #007BFF;
+        }
+
+        h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #007BFF;
+        }
+
+        .solutions-section {
+            background-color: white;
+            padding: 40px;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .solutions-section h3 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .solutions-section p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .section.solutions-container {
+            background-color: white;
+        }
+    </style>
+    <style>
+        a:link {
+          color: #007BFF;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        
+        a:visited {
+          color:#007BFF;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        
+        a:hover {
+          color: #007BFF;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+        
+        a:active {
+          color:#007BFF;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+        </style>
+</head>
+<body>
+
+    <div class="section header visible">
+        <h1>Concussions and CTE goes beyond the NFL: How sports leagues should minimize traumatic head injuries</h1>
+        <p>By Alex Lott</p>
+    </div>
+
+    <div class="section">
+        <div class="text-section">
+            <p>What do people think of when they hear concussion or CTE? Most recently, it's probably the discussion around Miami Dolphins quarterback Tua Tagovailoa possibly getting CTE. Tagovailoa got his third diagnosed concussion in two years on September 12th, 2024, and there was a lot of talk in the media about if he should retire. </p>
+            <p>While the National Football League has been the main sports league and sport mentioned when it comes to concussions and CTE, other sports also have a high risk for concussions. This problem, while often portrayed by the media as causing severe mental problems for former NFL players, goes deeper than that. Many athletes who play other sports get concussions as well, and most of the time, they are preventable.</p>
+            <p>Grace DeAmicis got a concussion at a club cheerleading practice.</p>
+            <p>Riley Fasteau suffered a head injury at an indoor club softball practice.</p>
+            <p>Lilly Sigersmith has had four sports-related concussions: two during lacrosse games, one during a soccer game, and one during a cross-country meet.</p>
+            <p>According to the <a href="https://www.mayoclinic.org/diseases-conditions/concussion/symptoms-causes/syc-20355594">Mayo Clinic</a>, “A concussion is a mild traumatic brain injury that affects brain function. Effects are often short term and can include headaches and trouble with concentration, memory, balance, mood, and sleep.” They further explain that concussions happen by head or body impacts that cause a change in brain function. Sports, especially high-contact sports like American football, are a major cause of concussions.</p>
+            <p>“I got a concussion while cheering,” said Grace DeAmicis. “Someone did a backhand spring on my head after I fell.” A back handspring is when a person flips their body the whole way around without being able to see where their hands land. DeAmicis added that the cheerleading squad didn't have the routine down before they practiced together. </p>
+            <p>Riley Fasteau was a senior in high school practicing with her club softball team when a teammate threw a ball badly, hitting her in the face. She needed seven stitches at the hospital but tested negative for a concussion. She experienced concussion-like symptoms though, such as dizziness and light sensitivity, but it was the mental issues that Fatseau struggled with after the injury.</p>
+            <p>“I was really limited in what I could do,” said Fasteau. “I could only hit and I could field a little bit, but not really. For the first time in my life I was scared of the ball, which I know sounds insane because it's a ball. I was nervous about it. I'm a catcher, so when I'd be catching, I was really scared it was going to hit me in the face. Obviously, I didn't get hit again, but it was something I really had to work through my senior year.”</p>
+            <p>Lilly Sigersmith has had four concussions across three sports throughout middle and high school. The most recent was during a high school soccer match where she collided with an opponent's head while trying to head the ball. It took Sigersmith three times to pass impact testing after the fourth concussion to return to play. She also suffered a concussion during a high school cross-country meet.</p>
+            <p>“The other one was cross country, which is kind of funny because a lot of people think of cross country as a non-contact sport,” said Sigersmith. “It pretty much is except for the really big races, like when we did state races in high school, that's like a funnel start. You have all these teams lined up, usually like four by four, so it's four and then four and it backs up. We were doing the funnel start and a lot of times we'll have people fall at the funnel starts, and I did. I got trampled a little bit and in cross country, a lot of people have spikes for outdoor, so I took a foot or two to the head and got a concussion that way.” </p>
+            <p>The other two happened during lacrosse games. As a defender, Sigersmith often was in between where opponents shot and the goal. Sigersmith got concussed during a game after the shaft of an opponent's metal stick hit her in the face on the shot's follow-through. The other lacrosse one happened when an opponent's shot hit the left side of her head. </p>
+            <p>While concussions are recognized quite quickly with a visit to the doctor, CTE is not. CTE, which stands for chronic traumatic encephalopathy, can only be diagnosed after death with an autopsy. In studies of deceased peoples brains, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4526170/">researchers</a> at Boston University have found a protein called tau in areas of the cerebral cortex, temporal lobe, thalamus, hypothalamus, and brainstem. These areas are responsible for short-term memory, speech, sleep patterns, and relaying sensory and motor information, to name a few.</p>
+            <p>“CTE is what they call a neuropathological diagnosis, meaning that the diagnosis is based on neuroanatomy, not on behavior or symptoms,” said Dr. Rachel Grashow, who works at the Football Player's Health Study at Harvard University. “Specifically, what they found in the brains of deceased players was that the more years of play they have, the more they saw these certain tau proteins accumulating in certain parts of those people's brains.”</p>
+            <p>The Harvard Football Player's Health Study researched former NFL players on the health issues faced in retirement. Dr. Grashow said that many players have health problems related to head injuries that can affect the whole body. </p>
+            <p>“It's kind of a combination of things,” said Dr. Grashow. “We know that head injury leads to hormonal dysfunction, so they have low testosterone. And low testosterone totally affects mood, it affects energy level, it affects concentration, it affects muscle function. So you can imagine there's this pathway where the head injury disrupts really important processes in their brain and their bodies, and then that leads them to have issues later.”</p>
+            <p>One of the main issues that Dr. Grashow found in former NFL players is cardiovascular issues, with 65 percent of former players passing away from heart and cardiovascular diseases. One of the most notable recent cardiovascular deaths is former wide-receiver Jacoby Jones, who died in July 2024 at 40 years old.  Traumatic brain injuries could contribute to these issues as the autonomic nervous system in the brain controls much of the heart. The autonomic nervous system is in the hypothalamus, one of the areas where tau proteins can grow.</p>
+            <p>In a <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9051987/">study</a> conducted with patients in the Massachusetts General Brigham hospital system, Dr. Grashow investigated whether traumatic brain injuries, such as concussions in sports besides American football, could also cause the same symptoms and health issues as former NFL players. Researchers found that patients with traumatic brain injuries of any severity had a higher risk of developing cardiovascular, hormonal, and neurological issues.</p>
+            <p>If athletes of all sports are at risk of having treatable debilitating health issues later in life due to head injuries, then leagues at all levels should prioritize athlete health.</p>
+            <p>Since settling a lawsuit with several former player's families, the NFL has had to report on the number of concussions per season. Below are three visualizations of concussion data from the past ten seasons.</p>
+        </div>
+    </div>
+
+    <div class="section data-visualization">
+        <div class="flourish-embed flourish-chart" data-src="visualisation/22122152" data-width="750px" data-height="750px"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22122152/thumbnail" width="750px" height="750px" alt="chart visualization" /></noscript></div>
+        <div class="flourish-embed flourish-chart" data-src="visualisation/22122105" data-width="750px" data-height="750px"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22122105/thumbnail" width="750px" height="750px" alt="chart visualization" /></noscript></div>
+        <div class="flourish-embed flourish-chart" data-src="visualisation/22122018" data-width="750px" data-height="750px"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22122018/thumbnail" width="500px" height="500px" alt="chart visualization" /></noscript></div>
+    </div>
+
+    <div class="section solutions-container">
+        <div class="solutions-section">
+            <h2>Solutions to Reduce Concussions</h2>
+            <h3>Helmets and Guardian Caps</h3>
+            <p>One of the main solutions introduced in the NFL is guardian caps. They are soft shell caps that can absorb energy from a hit, according to the company <a href="https://guardiansports.com/guardian-caps/"> website</a>. Since 2022, guardian caps have been required for certain positions during contact practices, such as offensive linemen, defensive linemen, tight ends, linebackers, and running backs. During NFL Week One in 2024, <a href="https://www.theglobeandmail.com/sports/article-five-nfl-players-make-history-as-first-to-wear-guardian-caps-in/">five NFL players</a> were the first to wear the guardian cap during a regular season game. </p>
+            <p>Looking at the data, the total number of concussions during games decreased from 184 in 2023 to 155 in 2024, when guardian caps were allowed during games. There also has been a slight decrease in practice concussions since the guardian cap mandate in 2022, with 37, 35, and 27 concussions over the past three seasons.</p>
+            <p>Helmets are an important way athletes in high-contact sports avoid serious concussions. Sigersmith thinks helmets should be mandatory in women's lacrosse, where eyewear is the usual mandated gear. </p>
+            <p>“A lot of people look at women's lacrosse and don't see it as much of a physical sport as men's lacrosse,” said Sigersmith. “But there is an extreme amount of contact also in women's lacrosse from my experience playing as a defender. Now they have the option to play with helmets, but I really do think that playing with helmets in general could be a really good idea for women's lacrosse. I got hit with a girl's shot coming from the eight, which was a dangerous shot on her part, but also at the same time, it's a totally preventable injury. The concussion probably wouldn't have been as severe as it was had I had a helmet on or some sort of head protection.”</p>
+            <h3>Rule Changes</h3>
+            <p>Another solution is changing game rules so that athlete safety is the priority. The NFL has implemented several rule changes since 2015, including penalties for contact to the head and neck area.</p>
+            <p>The highest number of concussions in the past ten seasons was in 2017 with 281 total concussions. In 2018, the NFL passed a new rule making it a foul if a player lowers their head to initiate contact with another player's head. The penalty is 15 yards and if done by a defender, automatic first down. The player is also subject to being ejected from the game.</p>
+            <p>This rule change was successful, as there were 214 total concussions in 2018, a decrease of 67 head injuries. Since then, the total number of concussions hasn't exceeded 225 per season. 
+                After the 2020 COVID season, concussions started to increase again, especially in games. In 2024, the NFL implemented updated kickoff rules and eliminated the swivel hip-drop tackle, a tackle where a player grabs an opponent with their hands and drops their lower body onto the opponent's legs. The new kickoff formation only allows players to move after the ball is caught or hits the ground, allowing for fewer high-speed collisions.</p>
+            <p>Sigersmith said that her school district doesn't allow headers anymore, which prevents concussions. However, this does add to the problem of school and club leagues not having standard rules for sports. In the United States, the National Federation of State High School Associations writes rules for most high school sports, but some private school leagues aren't members.</p>
+            <h3>Coaches Prioritizing Player Safety</h3>
+            <p>Fasteau said that her coach's negligence in switching equipment was a huge part of how her injury happened. If coaches prioritize player safety during practices and games, that could also limit the number of concussions.</p>
+            <p>“We were inside at the time, in a kind of batting cage facility, and they decided to use balls that we would use outdoors,” said Fasteau. “We had indoor balls, a little squishier, the outside is like a silicon rubber material. If it hits you in the head, it's not going to leave a mark, you're going to be fine. [The coaches] did not use those balls. They also did not have a first aid kit on hand. It's a small space, so if someone's bound to get hurt, I think the indoor balls are there for a reason. I think that a lot of coaches don't consider player safety and the equipment that they provide for their teams. I think that thing is super important, especially as someone that's been affected by that.”</p>
+            <p>“I wish that coaches make sure the safety of their athletes is a priority,” said DeAmicis, “And making sure we have the routine down before we tumble right next to each other.”</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="additional-text-section">
+            <h2>Solutions for Athletes already with Health Issues</h2>
+            <p>But what about athletes who get health issues after serious head injuries? Dr. Grashow says that because the media portrays CTE as something incurable, it's causing more harm to former athletes and their families. </p>
+            <p>“Often in the media, they act as if a guy is depressed before he passes away, then they must have CTE,” said Dr. Grashow. “So far, press coverage of CTE presents a set of symptoms as associated with CTE, but that isn't backed by strong science yet. The impression is that CTE is permanent since there's no cure, it's progressive in that everyone will get worse, and it's pervasive in that every player has it. As long as they are emphasizing those three messages, players and their families who hear that narrative are going to feel a lot of doom and gloom about their future.”</p>
+            <p>There are solutions for former athletes with health issues possibly related to brain injury. Dr. Grashow suggests not immediately assuming that health problems are CTE-related and finding cures for those individual symptoms such as depression, high blood pressure, low testosterone, and sleep apnea.</p>
+            <p>“I think that one key piece is to recommend players not be triggered by cognitive symptoms, but that they be more proactive and speak to their doctors about their symptoms and concerns,” said Dr. Grashow. “We encourage players to get their blood pressure checked, and that we really want physicians and medical care providers to treat them as men first and players second. We worry that they're seen as players first and that everything is attributed to their head injury when there's usually a lot more going on.”</p>
+            <p>If leagues, coaches, and executives work to change rules, have more protective gear, and prioritize player safety, then athletes will be less likely to have long term health issues and concerns about CTE.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Alex Lott. All rights reserved.</p>
+    </div>
+
+    <script>
+        document.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const sectionBottom = section.getBoundingClientRect().bottom;
+                if (sectionTop < window.innerHeight && sectionBottom > 0) {
+                    section.classList.add('visible');
+                } else {
+                    section.classList.remove('visible');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
